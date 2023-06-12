@@ -1,0 +1,50 @@
+{
+  "name": "@fa7ad/bondler",
+  "version": "0.0.0",
+  "description": "Bondler is a bundler",
+  "author": "Fahad Hossain <set.name.fahad@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "yarn lint -- --fix",
+    "release": "standard-version --no-verify",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fa7ad/bondler"
+  },
+  "bugs": {
+    "url": "https://github.com/fa7ad/bondler/issues"
+  },
+  "keywords": [
+    "bondler"
+  ],
+  "dependencies": {
+    "yargs": "17.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/node": "20.3.0",
+    "@types/yargs": "17.0.24",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "^4.3.0",
+    "install-peers": "1.0.4",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "standard-version": "^9.0.0",
+    "typescript": "5.1.3"
+  },
+  "peerDependencies": {
+    "esbuild": "0.18.1",
+    "esbuild-plugin-less": "1.2.0"
+  }
+}
