@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import type { BuildOptions } from 'esbuild'
 import type { lessLoader } from 'esbuild-plugin-less'
 
-import { build, context } from 'esbuild'
+import esbuild from 'esbuild'
 import yargs from 'yargs/yargs'
 
 export interface BundleOptions extends BuildOptions {
@@ -63,7 +63,7 @@ async function main<T extends BundleOptionsMap>({
       ...(esbuildOptions as Partial<BuildOptions>),
       plugins: bundleType === 'less' ? [(await import('esbuild-plugin-less')).lessLoader(lessOptions)] : [],
     } as const
-    return watch ? (await context(buildOptions)).watch() : build(buildOptions)
+    return watch ? (await esbuild.context(buildOptions)).watch() : esbuild.build(buildOptions)
   })
   return Promise.all(builders)
 }
