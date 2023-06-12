@@ -4,6 +4,7 @@
   "description": "Bondler is a bundler",
   "author": "Fahad Hossain <set.name.fahad@gmail.com>",
   "main": "dist/index.js",
+  "bin": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "license": "MIT",
@@ -46,5 +47,8 @@
   "peerDependencies": {
     "esbuild": "0.18.1",
     "esbuild-plugin-less": "1.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
