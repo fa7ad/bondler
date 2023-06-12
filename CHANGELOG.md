@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/fa7ad/bondler/compare/v0.0.2...v0.0.3) (2023-06-12)
+
+
+### Bug Fixes
+
+* update esbuild import to work with esm ([1a3d6f1](https://github.com/fa7ad/bondler/commit/1a3d6f14a3afd2712d0062f1ff6b899534128e27))
+
 ### [0.0.2](https://github.com/fa7ad/bondler/compare/v0.0.1...v0.0.2) (2023-06-12)
 
 
