@@ -1,6 +1,6 @@
 {
   "name": "@fa7ad/bondler",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bondler is a bundler",
   "author": "Fahad Hossain <set.name.fahad@gmail.com>",
   "main": "dist/index.js",
