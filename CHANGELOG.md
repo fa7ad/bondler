@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/fa7ad/bondler/compare/v0.0.3...v0.0.4) (2023-06-13)
+
+
+### Bug Fixes
+
+* specify files to include in npm package ([2a6d0ee](https://github.com/fa7ad/bondler/commit/2a6d0eea82baa08c554118251bcfdd2bfb45e5f7))
+
 ### [0.0.3](https://github.com/fa7ad/bondler/compare/v0.0.2...v0.0.3) (2023-06-12)
 
 
