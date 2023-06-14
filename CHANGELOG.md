@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/fa7ad/bondler/compare/v0.0.4...v0.0.5) (2023-06-14)
+
+
+### Bug Fixes
+
+* remove less plugin, config supports plugins ([187c593](https://github.com/fa7ad/bondler/commit/187c59394d4a86c081d0309805571da5ec1f6f3c))
+
 ### [0.0.4](https://github.com/fa7ad/bondler/compare/v0.0.3...v0.0.4) (2023-06-13)
 
 
