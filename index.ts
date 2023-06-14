@@ -3,15 +3,11 @@ import { createRequire } from 'node:module'
 import { extname, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import type { BuildOptions } from 'esbuild'
-import type { lessLoader } from 'esbuild-plugin-less'
 
 import esbuild from 'esbuild'
 import yargs from 'yargs/yargs'
 
-export interface BundleOptions extends BuildOptions {
-  bundleType?: 'js' | 'less'
-  lessOptions?: Parameters<typeof lessLoader>[0]
-}
+export type BundleOptions = BuildOptions
 
 export interface BundleOptionsMap {
   [bundleName: string]: Partial<BundleOptions>
@@ -57,11 +53,10 @@ async function main<T extends BundleOptionsMap>({
   }
 
   const builders = targets.map(async target => {
-    const { bundleType, lessOptions, ...esbuildOptions } = options[target]
+    const esbuildOptions = options[target] as Partial<BuildOptions>
     const buildOptions = {
       ...defaultBuildOptions,
-      ...(esbuildOptions as Partial<BuildOptions>),
-      plugins: bundleType === 'less' ? [(await import('esbuild-plugin-less')).lessLoader(lessOptions)] : [],
+      ...esbuildOptions,
     } as const
     return watch ? (await esbuild.context(buildOptions)).watch() : esbuild.build(buildOptions)
   })
