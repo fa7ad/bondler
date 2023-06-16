@@ -1,0 +1,46 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: '@fa7ad/bondler'
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@fa7ad'
+          cache: 'pnpm'
+      - name: Install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm install
+      - name: Build
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm build
+      - name: Publish to NPM
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

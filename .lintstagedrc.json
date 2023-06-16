@@ -1,4 +1,4 @@
 {
-  "*.ts": "yarn lint:fix",
+  "*.ts": "pnpm lint:fix",
   "*.{css,html,json,md,yml}": "prettier --write"
 }
