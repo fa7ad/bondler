@@ -1,6 +1,6 @@
 {
   "name": "@fa7ad/bondler",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A simple wrapper around esbuild to make configuration a little less verbose.",
   "author": "Fahad Hossain <set.name.fahad@gmail.com>",
   "main": "dist/index.js",

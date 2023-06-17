@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.6](https://github.com/fa7ad/bondler/compare/v0.0.5...v0.0.6) (2023-06-17)
+
+
+### Bug Fixes
+
+* yarn -&gt; pnpm + release-please ([5cfd0f6](https://github.com/fa7ad/bondler/commit/5cfd0f645b16d9cb0a0e79939b7dd5c075a89a38))
+
 ### [0.0.5](https://github.com/fa7ad/bondler/compare/v0.0.4...v0.0.5) (2023-06-14)
 
 
